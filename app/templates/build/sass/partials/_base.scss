@@ -1,8 +1,6 @@
 /*//////////////////////////////////////
 //  imports
 //////////////////////////////////////*/
-
-@import "compass/reset";
 @import "compass/css3";
 @import "bourbon/bourbon";
 @import "neat/neat";
@@ -26,6 +24,9 @@ $vimeo:     #00BFFF;
 $youtube:   #FF0000;
 $blogger:   #FF2F00;
 
+$primary: #000;
+$secondary: #222;
+
 /*//////////////////////////////////////
 //  fonts
 //////////////////////////////////////*/
@@ -39,39 +40,6 @@ $grid-columns: 12;
 $width:1200px;
 $max-width:1200px;
 
-*{
-    @include box-sizing(border-box);
-}
-
-.block{
-    @extend %block;
-    @include clearfix;
-}
-
-.disable-hover{
-    pointer-events:none;
-}
-
-b,strong{
-    font-weight:700;
-}
-
-i,em{
-    font-style:italic;
-}
-
-input,button{
-    @include appearance(none);
-}
-
-input:focus, textarea:focus,button,input[type="submit"]{
-    outline:none;
-}
-
-button,input[type="submit"]{
-    cursor:pointer;
-}
-
 /*//////////////////////////////////////
 //  mixins
 //////////////////////////////////////*/
@@ -82,7 +50,6 @@ button,input[type="submit"]{
     &:-ms-input-placeholder { @content; }
     &::-webkit-input-placeholder { @content; } 
 }
-
 
 /*//////////////////////////////////////
 //  silent classes
@@ -102,7 +69,6 @@ button,input[type="submit"]{
 
 %cover{
     background-size: cover;
-    -ms-behavior: url(/js/vendor/backgroundsize.min.htc);
 }
 
 %default-transition{
@@ -137,15 +103,3 @@ button,input[type="submit"]{
     content:" ";
     display:block;
 }
-
-
-body,html{
-    display:block;
-    height:100%;
-}
-
-body{
-    font-size:62.5%;
-    position:relative;
-}
-

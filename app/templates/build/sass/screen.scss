@@ -1,1 +1,7 @@
-@import "partials/base";
+@import "compass/reset";
+
+@import "partials/*";
+@import "atoms/*";
+@import "molecules/*";
+@import "organisms/*";
+@import "pages/*";
